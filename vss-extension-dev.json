@@ -1,11 +1,11 @@
 {
     "manifestVersion": 1,
-    "id": "CycleTimeHistogramExtension-Dev",
-    "publisher": "AltamirJuniorDias-Dev",
+    "id": "histograma-ciclo-tempo",
+    "publisher": "FranciscoAlcantara",
     "version": "3.0.0",
-    "name": "Cycle Time Histogram (Dev)",
-    "description": "Cycle Time Histogram (Dev)",
-    "public": false,
+    "name": "Histograma de Tempo de Ciclo",
+    "description": "Histograma de Tempo de Ciclo",
+    "public": true,
     "icons": {
         "default": "images/icon.png"
     },
@@ -26,15 +26,15 @@
     },
     "contributions": [
         {
-            "id": "CycleTime",
+            "id": "HistogramaCicloTempo",
             "type": "ms.vss-dashboards-web.widget",
             "targets": [
                 "ms.vss-dashboards-web.widget-catalog",
-                ".CycleTimeConfiguration"
+                ".HistogramaCicloTempoConfiguracao"
             ],
             "properties": {
-                "name": "Cycle Time",
-                "description": "Cycle Time histogram with percentiles",
+                "name": "Histograma de Tempo de Ciclo",
+                "description": "Histograma de tempo de ciclo com percentis",
                 "catalogIconUrl": "images/icon.png",
                 "previewImageUrl": "images/icon.png",
                 "uri": "widget.html",
@@ -130,12 +130,12 @@
             }
         },
         {
-            "id": "CycleTimeConfiguration",
+            "id": "HistogramaCicloTempoConfiguracao",
             "type": "ms.vss-dashboards-web.widget-configuration",
             "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
             "properties": {
-                "name": "Cycle Time - Configuration",
-                "description": "Cycle Time - Configuration",
+                "name": "Histograma de Tempo de Ciclo - Configuração",
+                "description": "Histograma de Tempo de Ciclo - Configuração",
                 "uri": "configuration.html"
             }
         }

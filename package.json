@@ -1,10 +1,43 @@
 {
+  "name": "azure-devops-extension-cycle-time-histogram",
+  "version": "3.0.0",
+  "description": "Azure DevOps dashboard widget: Cycle Time Histogram with configurable percentiles",
+  "license": "MIT",
+  "author": "Altamir Junior Dias",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/altamir-junior-dias/azure-devops-extension-cycle-time-histogram.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "rimraf dist publish",
+    "build": "npm run clean && webpack --mode production",
+    "build:dev": "npm run clean && webpack --mode development",
+    "package": "npm run build && tfx extension create --manifest-globs vss-extension.json --output-path ./publish --rev-version",
+    "package:dev": "npm run build:dev && tfx extension create --manifest-globs vss-extension-dev.json --output-path ./publish",
+    "publish:dev": "npm run package:dev && tfx extension publish --manifest-globs vss-extension-dev.json",
+    "test": "jest"
+  },
   "devDependencies": {
-    "chart.js": "^3.8.0",
+    "@types/chart.js": "^2.9.41",
+    "@types/jest": "^30.0.0",
+    "chart.js": "^4.0.0",
     "chartjs-plugin-datalabels": "^2.0.0",
-    "del": "^6.1.1",
-    "event-stream": "^4.0.1",
-    "gulp": "^4.0.2",
-    "vss-web-extension-sdk": "^5.141.0"
+    "copy-webpack-plugin": "^13.0.1",
+    "cross-env": "^7.0.3",
+    "jest": "^30.3.0",
+    "rimraf": "^5.0.10",
+    "tfx-cli": "^0.22.6",
+    "ts-jest": "^29.4.9",
+    "ts-loader": "^9.5.7",
+    "typescript": "^6.0.3",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "azure-devops-extension-api": "^4.270.0",
+    "azure-devops-extension-sdk": "^4.2.0"
   }
 }

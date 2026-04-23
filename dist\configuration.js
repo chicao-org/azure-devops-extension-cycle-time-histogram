@@ -43,7 +43,8 @@
     };    
 
     const getSettings = (widgetSettings) => {
-        let settings = JSON.parse(widgetSettings.customSettings.data);
+        let raw = widgetSettings.customSettings.data;
+        let settings = raw ? JSON.parse(raw) : {};
 
         return {
             title: settings?.title ?? 'Cycle Time',
@@ -110,8 +111,6 @@
             deferreds.push(updateDateFields($cycleTimeEndField, settings.cycleTimeEndField));
 
             Promise.all(deferreds).then(_ => deferred.resolve());
-
-            deferred.resolve();
         });
 
         return deferred.promise();

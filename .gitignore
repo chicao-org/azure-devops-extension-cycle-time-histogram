@@ -1,3 +1,19 @@
 /dist
 /node_modules
 /publish
+*.vsix
+.DS_Store
+.vscode/
+
+# Jest
+/jest.mocks/
+/src/__tests__/
+coverage/
+*.log
+
+# OS
+Thumbs.db
+.nvmrc
+.editorconfig
+.devcontainer/
+.github/

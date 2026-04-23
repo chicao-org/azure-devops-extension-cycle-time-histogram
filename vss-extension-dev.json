@@ -1,11 +1,11 @@
 {
     "manifestVersion": 1,
-    "id": "CycleTimeHistogramExtension",
-    "publisher": "AltamirJuniorDias",
+    "id": "CycleTimeHistogramExtension-Dev",
+    "publisher": "AltamirJuniorDias-Dev",
     "version": "3.0.0",
-    "name": "Cycle Time Histogram",
-    "description": "Cycle Time Histogram",
-    "public": true,
+    "name": "Cycle Time Histogram (Dev)",
+    "description": "Cycle Time Histogram (Dev)",
+    "public": false,
     "icons": {
         "default": "images/icon.png"
     },

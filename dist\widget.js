@@ -71,7 +71,8 @@
     };
 
     const getSettings = (widgetSettings) => {
-        let settings = JSON.parse(widgetSettings.customSettings.data);
+        let raw = widgetSettings.customSettings.data;
+        let settings = raw ? JSON.parse(raw) : {};
 
         return {
             title: settings?.title ?? 'Cycle Time',

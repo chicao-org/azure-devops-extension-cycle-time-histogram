@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "histograma-ciclo-tempo",
     "publisher": "FranciscoAlcantara",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "name": "Histograma de Tempo de Ciclo",
     "description": "Histograma de Tempo de Ciclo",
     "public": true,
